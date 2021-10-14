@@ -7,17 +7,18 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "develop": "webpack serve --config webpack.config.js",
-    "build": "tsc",
-    "watch": "tsc -w",
+    "develop": "cross-env NODE_ENV=\"development\" webpack serve --config webpack.config.js",
+    "build": "run-s clean && cross-env NODE_ENV=\"production\" webpack --config webpack.config.js",
     "eslint": "eslint src --ext .js,.jsx,.ts,.tsx",
-    "typecheck": "tsc --project tsconfig.json --noEmit --skipLibCheck"
+    "typecheck": "tsc --project tsconfig.json --noEmit --skipLibCheck",
+    "clean": "rimraf build"
   },
   "devDependencies": {
     "@types/react": "^17.0.24",
     "@types/react-dom": "^17.0.9",
     "@typescript-eslint/eslint-plugin": "^4.29.2",
     "@typescript-eslint/parser": "^4.29.2",
+    "cross-env": "^7.0.3",
     "dotenv": "^10.0.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
@@ -31,7 +32,9 @@
     "eslint-webpack-plugin": "^3.0.1",
     "fork-ts-checker-webpack-plugin": "^6.3.3",
     "html-webpack-plugin": "^5.3.2",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.3.2",
+    "rimraf": "^3.0.2",
     "ts-loader": "^9.2.6",
     "tsconfig-paths-webpack-plugin": "^3.5.1",
     "typescript": "^4.3.5",

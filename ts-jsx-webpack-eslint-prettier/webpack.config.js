@@ -14,8 +14,10 @@ const envKeys = Object.entries(env || {}).reduce((acc, [k, v]) => {
   return acc;
 }, {});
 
+const isDev = process.env.NODE_ENV === 'development';
+
 module.exports = {
-  mode: 'development',
+  mode: isDev ? 'development' : 'production',
   target: 'web',
   entry: './src/index.tsx',
   output: {
@@ -33,7 +35,7 @@ module.exports = {
                 loader: 'ts-loader',
                 options: {
                   transpileOnly: true,
-                  configFile: path.resolve(__dirname, 'tsconfig.json')
+                  configFile: path.resolve(__dirname, isDev ? 'tsconfig.json' : 'tsconfig.prod.json')
                 }
               }
             ]
@@ -49,7 +51,7 @@ module.exports = {
     }),
     new ForkTsCheckerWebpackPlugin({
       typescript: {
-        tsconfig: './tsconfig.json'
+        tsconfig: path.resolve(__dirname, './tsconfig.json')
       }
     }),
     new ESLintPlugin({ extensions: ['ts', 'tsx', 'js', 'jsx'] })
@@ -58,6 +60,7 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
     plugins: [new TsconfigPathsPlugin({ configFile: path.resolve(__dirname, './tsconfig.json') })]
   },
+  devtool: isDev ? 'inline-source-map' : 'hidden-source-map',
   devServer: {
     compress: true,
     https: true,
