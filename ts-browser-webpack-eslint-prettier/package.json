@@ -1,0 +1,38 @@
+{
+  "name": "ts-eslint-prettier",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "develop": "cross-env NODE_ENV=\"development\" webpack --watch --config webpack.config.js",
+    "build": "run-s clean && cross-env NODE_ENV=\"production\" webpack --config webpack.config.js",
+    "eslint": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "typecheck": "tsc --project tsconfig.json --noEmit --skipLibCheck",
+    "clean": "rimraf build"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.29.2",
+    "@typescript-eslint/parser": "^4.29.2",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-webpack": "^0.13.2",
+    "eslint-plugin-import": "^2.24.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-webpack-plugin": "^3.1.0",
+    "fork-ts-checker-webpack-plugin": "^6.4.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.3.2",
+    "rimraf": "^3.0.2",
+    "ts-loader": "^9.2.6",
+    "tsconfig-paths-webpack-plugin": "^3.5.1",
+    "typescript": "^4.3.5",
+    "webpack": "^5.62.1",
+    "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {}
+}
