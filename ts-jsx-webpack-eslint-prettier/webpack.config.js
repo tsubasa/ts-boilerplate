@@ -22,7 +22,7 @@ module.exports = {
   entry: './src/index.tsx',
   output: {
     path: `${__dirname}/build`,
-    filename: 'app.min.js'
+    filename: 'app.min.js',
   },
   module: {
     rules: [
@@ -35,36 +35,36 @@ module.exports = {
                 loader: 'ts-loader',
                 options: {
                   transpileOnly: true,
-                  configFile: path.resolve(__dirname, isDev ? 'tsconfig.json' : 'tsconfig.prod.json')
-                }
-              }
-            ]
-          }
-        ]
-      }
-    ]
+                  configFile: path.resolve(__dirname, isDev ? 'tsconfig.json' : 'tsconfig.prod.json'),
+                },
+              },
+            ],
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     new webpack.DefinePlugin(envKeys),
     new HtmlWebpackPlugin({
-      template: './public/index.html'
+      template: './public/index.html',
     }),
     new ForkTsCheckerWebpackPlugin({
       typescript: {
-        tsconfig: path.resolve(__dirname, './tsconfig.json')
-      }
+        tsconfig: path.resolve(__dirname, './tsconfig.json'),
+      },
     }),
-    new ESLintPlugin({ extensions: ['ts', 'tsx', 'js', 'jsx'] })
+    new ESLintPlugin({ extensions: ['ts', 'tsx', 'js', 'jsx'] }),
   ],
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
-    plugins: [new TsconfigPathsPlugin({ configFile: path.resolve(__dirname, './tsconfig.json') })]
+    plugins: [new TsconfigPathsPlugin({ configFile: path.resolve(__dirname, './tsconfig.json') })],
   },
   devtool: isDev ? 'inline-source-map' : 'hidden-source-map',
   devServer: {
     compress: true,
     https: true,
     open: true,
-    hot: true
-  }
+    hot: true,
+  },
 };
