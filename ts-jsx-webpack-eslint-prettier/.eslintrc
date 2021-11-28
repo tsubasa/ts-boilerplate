@@ -54,6 +54,7 @@
       }
     ],
     "no-use-before-define": "off", // https://github.com/typescript-eslint/typescript-eslint/issues/2540
+    "react/function-component-definition": "off",
     "react/jsx-filename-extension": [
       "warn",
       {
@@ -65,7 +66,7 @@
         ]
       }
     ],
-    "react/jsx-props-no-spreading": "off"
+    "react/jsx-props-no-spreading": "off",
   },
   "settings": {
     "import/resolver": {
