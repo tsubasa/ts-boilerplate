@@ -1,5 +1,5 @@
 {
-  "name": "ts-eslint-prettier",
+  "name": "ts-eslint-prettier-playground",
   "version": "1.0.0",
   "description": "",
   "author": "",
@@ -7,7 +7,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "start": "dotenv -e .env.production ts-node-dev src/index.ts",
     "develop": "ts-node-dev --respawn src/index.ts",
     "eslint": "eslint src --ext .js,.jsx,.ts,.tsx",
     "typecheck": "tsc --project tsconfig.json --noEmit --skipLibCheck"
@@ -21,8 +21,8 @@
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.5.0",
-    "ts-node": "^10.9.1",
-    "ts-node-dev": "^2.0.0",
+    "ts-node": "^10.5.0",
+    "ts-node-dev": "^1.1.8",
     "typescript": "^4.5.2"
   },
   "dependencies": {}
