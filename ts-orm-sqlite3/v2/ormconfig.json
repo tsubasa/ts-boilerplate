@@ -1,0 +1,17 @@
+[
+  {
+    "name": "default",
+    "type": "sqlite",
+    "database": "./database.db",
+    "autoSchemaSync": true,
+    "entities": [
+      "src/infrastructure/db/entities/**/*{.js,.ts}"
+    ],
+    "migrations": [
+      "src/infrastructure/db/migrations/**/*{.js,.ts}"
+    ],
+    "cli": {
+      "migrationsDir": "src/infrastructure/db/migrations/"
+    }
+  }
+]
