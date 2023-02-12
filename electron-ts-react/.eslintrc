@@ -1,0 +1,110 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb",
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended.ts
+    "plugin:@typescript-eslint/recommended",
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/index.js#L128-L149
+    "plugin:react/recommended",
+    // https://github.com/prettier/eslint-plugin-prettier#recommended-configuration
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "warn"
+    ],
+    "class-methods-use-this": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/webpack.config.ts"
+        ],
+        "peerDependencies": false
+      }
+    ],
+    "no-promise-executor-return": "off",
+    "no-restricted-exports": "off",
+    "react/function-component-definition": "off",
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "jsx-a11y/label-has-associated-control": [
+      "warn",
+      {
+        "labelComponents": [
+          "label"
+        ],
+        "labelAttributes": [
+          "label"
+        ],
+        "controlComponents": [
+          "Field"
+        ],
+        "depth": 3
+      }
+    ],
+    "react/prop-types": "off",
+    "react/require-default-props": "off"
+  },
+  "settings": {
+    "import/core-modules": [
+      "electron"
+    ],
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      },
+      "webpack": {}
+    },
+    "react": {
+      "version": "detect"
+    }
+  },
+  "ignorePatterns": [
+    "dist/*",
+    "release/*"
+  ]
+}
