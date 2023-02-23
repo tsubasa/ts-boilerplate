@@ -5,14 +5,13 @@
   "description": "",
   "main": "dist/main.js",
   "scripts": {
-    "develop": "run-s clean:dist && run-p develop:*",
+    "develop": "run-s clean && run-p develop:*",
     "develop:electron": "cross-env NODE_ENV=\"development\" webpack --config-name main --config-name preload && run-s serve",
     "develop:renderer": "cross-env NODE_ENV=\"development\" webpack serve --config-name renderer --progress",
     "serve": "electron .",
-    "clean": "run-p clean:*",
-    "clean:dist": "rimraf dist",
-    "eslint": "eslint src --ext .js,.jsx,.ts,.tsx",
-    "typecheck": "tsc --project tsconfig.json --noEmit --skipLibCheck"
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "typecheck": "tsc --project tsconfig.json --noEmit --skipLibCheck",
+    "clean": "rimraf dist"
   },
   "keywords": [],
   "author": "",

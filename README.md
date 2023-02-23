@@ -3,13 +3,21 @@
 TypeScript環境を手軽に構築すること目的としたリポジトリです。
 
 - ts-config-latest
-  - 最新の TypeScript の tsconfig を確認するためのディレクトリ
-- ts-eslint-prettier
-  - Node ベースの TS 開発環境
+  - 最新の tsconfig.json 確認用
+- ts-node-eslint-prettier
+  - Node + TypeScript の開発環境
 - ts-browser-webpack-eslint-prettier
-  - ブラウザベースの TS 開発環境
+  - Browser + Webpack + TypeScript の開発環境
 - ts-jsx-webpack-eslint-prettier
-  - React ベースの TS 開発環境
+  - React + Webpack + TypeScript の開発環境 [Webpack]
+- ts-jsx-vite-eslint-prettier
+  - React + Vite + TypeScript の開発環境 [Vite]
+- ts-sass-static-vite-eslint-stylelint-prittier
+  - Browser + Vite + Sass + TypeScript の開発環境
+- ts-orm-splite3
+  - SQLite3 + TypeScript の開発環境
+- electron-ts-react
+  - Electron + React + TypeScript のアプリ開発環境
 
 ## ESLint 関連メモ
 

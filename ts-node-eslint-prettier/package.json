@@ -7,15 +7,17 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
     "develop": "ts-node-dev --respawn src/index.ts",
-    "eslint": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "build": "tsc",
+    "preview": "dotenv -e .env.production ts-node-dev src/index.ts",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
     "typecheck": "tsc --project tsconfig.json --noEmit --skipLibCheck"
   },
   "devDependencies": {
     "@types/node": "^18.14.0",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
     "@typescript-eslint/parser": "^5.52.0",
+    "dotenv-cli": "^6.0.0",
     "eslint": "^8.34.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.6.0",

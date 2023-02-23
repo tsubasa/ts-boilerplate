@@ -9,7 +9,7 @@
   "scripts": {
     "develop": "cross-env NODE_ENV=\"development\" webpack --watch --config webpack.config.js",
     "build": "run-s clean && cross-env NODE_ENV=\"production\" webpack --config webpack.config.js",
-    "eslint": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
     "typecheck": "tsc --project tsconfig.json --noEmit --skipLibCheck",
     "clean": "rimraf build"
   },
