@@ -5,7 +5,7 @@
     "es2021": true
   },
   "extends": [
-    "airbnb",
+    "airbnb-base",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended"
   ],
@@ -43,18 +43,6 @@
         ]
       }
     ],
-    "no-use-before-define": "off", // https://github.com/typescript-eslint/typescript-eslint/issues/2540
-    "react/function-component-definition": "off",
-    "react/jsx-filename-extension": [
-      "warn",
-      {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
-      }
-    ]
+    "no-use-before-define": "off" // https://github.com/typescript-eslint/typescript-eslint/issues/2540
   }
 }
