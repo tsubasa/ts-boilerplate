@@ -27,7 +27,6 @@ export default class App {
   }
 
   private static onReady() {
-    App.setup();
     App.initMainWindow();
     App.loadMainWindow();
     App.loadDevTools();
@@ -38,8 +37,6 @@ export default class App {
       App.onReady();
     }
   }
-
-  private static setup() {}
 
   private static initMainWindow() {
     App.mainWindow = new BrowserWindow({

@@ -25,12 +25,8 @@ const StyledItem = styled.div<{ right?: boolean }>`
 const WindowFooter: React.FC = () => {
   return (
     <StyledFooter>
-      <StyledItem>
-        Left
-      </StyledItem>
-      <StyledItem right>
-        Right
-      </StyledItem>
+      <StyledItem>Left</StyledItem>
+      <StyledItem right>Right</StyledItem>
     </StyledFooter>
   );
 };
