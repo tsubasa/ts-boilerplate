@@ -16,7 +16,7 @@ TypeScript環境を手軽に構築すること目的としたリポジトリで�
   - Browser + Vite + Sass + TypeScript の開発環境
 - ts-orm-splite3
   - SQLite3 + TypeScript の開発環境
-- electron-ts-react
+- ts-electron-react
   - Electron + React + TypeScript のアプリ開発環境
 
 ## ESLint 関連メモ
