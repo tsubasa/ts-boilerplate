@@ -2,22 +2,16 @@
 
 TypeScript環境を手軽に構築すること目的としたリポジトリです。
 
-- ts-config-latest
-  - 最新の tsconfig.json 確認用
-- ts-node-eslint-prettier
-  - Node + TypeScript の開発環境
-- ts-browser-webpack-eslint-prettier
-  - Browser + Webpack + TypeScript の開発環境
-- ts-jsx-webpack-eslint-prettier
-  - React + Webpack + TypeScript の開発環境 [Webpack]
-- ts-jsx-vite-eslint-prettier
-  - React + Vite + TypeScript の開発環境 [Vite]
-- ts-sass-static-vite-eslint-stylelint-prittier
-  - Browser + Vite + Sass + TypeScript の開発環境
-- ts-orm-splite3
-  - SQLite3 + TypeScript の開発環境
-- ts-electron-react
-  - Electron + React + TypeScript のアプリ開発環境
+| name | description |
+| ---- | ---- |
+| [ts-config-latest](ts-config-latest) | 最新の tsconfig.json 確認用 |
+| [ts-node-eslint-prettier](ts-node-eslint-prettier) | `Node`, `TypeScript` |
+| [ts-browser-webpack-eslint-prettier](ts-browser-webpack-eslint-prettier) | `Browser`, `Webpack`, `TypeScript` |
+| [ts-jsx-webpack-eslint-prettier](ts-jsx-webpack-eslint-prettier) | `React`, `Webpack`, `TypeScript` |
+| [ts-jsx-vite-eslint-prettier](ts-jsx-vite-eslint-prettier) | `React`, `Vite`, `TypeScript` |
+| [ts-sass-static-vite-eslint-stylelint-prittier](ts-sass-static-vite-eslint-stylelint-prittier) | `Browser`, `Vite`, `Sass`, `TypeScript` |
+| [ts-orm-splite3](ts-orm-splite3) | `SQLite3`, `TypeScript` |
+| [ts-electron-react](ts-electron-react) | `Electron`, `React`, `TypeScript` |
 
 ## ESLint 関連メモ
 
