@@ -9,8 +9,8 @@ TypeScript環境を手軽に構築すること目的としたリポジトリで�
 | [ts-browser-webpack-eslint-prettier](ts-browser-webpack-eslint-prettier) | `Browser`, `Webpack`, `TypeScript` |
 | [ts-jsx-webpack-eslint-prettier](ts-jsx-webpack-eslint-prettier) | `React`, `Webpack`, `TypeScript` |
 | [ts-jsx-vite-eslint-prettier](ts-jsx-vite-eslint-prettier) | `React`, `Vite`, `TypeScript` |
-| [ts-sass-static-vite-eslint-stylelint-prittier](ts-sass-static-vite-eslint-stylelint-prittier) | `Browser`, `Vite`, `Sass`, `TypeScript` |
-| [ts-orm-splite3](ts-orm-splite3) | `SQLite3`, `TypeScript` |
+| [ts-sass-static-vite-eslint-stylelint-prettier](ts-sass-static-vite-eslint-stylelint-prettier) | `Browser`, `Vite`, `Sass`, `TypeScript` |
+| [ts-orm-sqlite3](ts-orm-sqlite3) | `SQLite3`, `TypeScript` |
 | [ts-electron-react](ts-electron-react) | `Electron`, `React`, `TypeScript` |
 
 ## ESLint 関連メモ
