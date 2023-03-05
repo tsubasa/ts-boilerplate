@@ -1,8 +1,8 @@
 # ts-jsx-vite-eslint-prettier
 
-## Styling
+## Styling guide
 
-### How to use Styled
+### How to use Styled-Components
 
 1. install styled-components
 
