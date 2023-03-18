@@ -1,13 +1,12 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-
-const path = require('path');
-const ESLintPlugin = require('eslint-webpack-plugin');
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+import path from 'path';
+import type { Configuration } from 'webpack';
+import ESLintPlugin from 'eslint-webpack-plugin';
+import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 
 const isDev = process.env.NODE_ENV === 'development';
 
-module.exports = {
+export default {
   mode: isDev ? 'development' : 'production',
   target: 'web',
   entry: './src/index.ts',
@@ -38,7 +37,7 @@ module.exports = {
   plugins: [
     new ForkTsCheckerWebpackPlugin({
       typescript: {
-        tsconfig: path.resolve(__dirname, './tsconfig.json'),
+        configFile: path.resolve(__dirname, './tsconfig.json'),
       },
     }),
     new ESLintPlugin({ extensions: ['ts', 'tsx', 'js', 'jsx'] }),
@@ -48,4 +47,4 @@ module.exports = {
     plugins: [new TsconfigPathsPlugin({ configFile: path.resolve(__dirname, './tsconfig.json') })],
   },
   devtool: isDev ? 'inline-source-map' : 'hidden-source-map',
-};
+} satisfies Configuration;

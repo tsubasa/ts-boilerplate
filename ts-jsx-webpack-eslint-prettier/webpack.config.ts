@@ -1,22 +1,21 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-
-const path = require('path');
-const webpack = require('webpack');
-const ESLintPlugin = require('eslint-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-const dotenv = require('dotenv');
+import path from 'path';
+import webpack, { Configuration } from 'webpack';
+import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
+import ESLintPlugin from 'eslint-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
+import dotenv from 'dotenv';
 
 const env = dotenv.config().parsed;
-const envKeys = Object.entries(env || {}).reduce((acc, [k, v]) => {
+const envKeys = Object.entries(env || {}).reduce<Record<string, string>>((acc, [k, v]) => {
   acc[`process.env.${k}`] = JSON.stringify(v);
   return acc;
 }, {});
 
 const isDev = process.env.NODE_ENV === 'development';
 
-module.exports = {
+export default {
   mode: isDev ? 'development' : 'production',
   target: 'web',
   entry: './src/index.tsx',
@@ -51,7 +50,7 @@ module.exports = {
     }),
     new ForkTsCheckerWebpackPlugin({
       typescript: {
-        tsconfig: path.resolve(__dirname, './tsconfig.json'),
+        configFile: path.resolve(__dirname, './tsconfig.json'),
       },
     }),
     new ESLintPlugin({ extensions: ['ts', 'tsx', 'js', 'jsx'] }),
@@ -66,5 +65,5 @@ module.exports = {
     https: true,
     open: true,
     hot: true,
-  },
-};
+  } satisfies DevServerConfiguration,
+} satisfies Configuration;

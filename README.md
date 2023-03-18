@@ -13,6 +13,50 @@ TypeScript環境を手軽に構築すること目的としたリポジトリで�
 | [ts-orm-sqlite3](ts-orm-sqlite3) | `SQLite3`, `TypeScript` |
 | [ts-electron-react](ts-electron-react) | `Electron`, `React`, `TypeScript` |
 
+## Webpack 関連メモ
+
+### webpack.config の TypeScript 化
+
+- [公式ドキュメント](https://webpack.js.org/configuration/configuration-languages/#typescript)
+
+#### 必須パッケージインストール
+
+```
+$ yarn add --dev webpack ts-node
+```
+
+最新バージョンでは `@types/webpack` や `@types/webpack-dev-server` などの定義は不要
+
+#### tsconfig.json の修正
+
+```json
+{
+  "compilerOptions": {
+    "module": "ESNext",
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
+```
+
+#### webpackDevServer を利用する場合
+
+```ts
+import type { Configuration } from 'webpack';
+import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
+
+export default {
+  // ...
+  // devServerConfig
+  devServer: {
+    // ...
+  } satisfies DevServerConfiguration
+} satisfies Configuration;
+```
+
 ## ESLint 関連メモ
 
 ### eslint-config-* の設定比較

@@ -30,6 +30,15 @@
         "tsx": "never"
       }
     ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/webpack.config.ts"
+        ],
+        "peerDependencies": false
+      }
+    ],
     "import/prefer-default-export": "off",
     "no-console": [
       "warn",

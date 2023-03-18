@@ -39,7 +39,7 @@
       "error",
       {
         "devDependencies": [
-          "**/webpack.config.js"
+          "**/webpack.config.ts"
         ],
         "peerDependencies": false
       }
