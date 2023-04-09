@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "develop": "ts-node-dev --respawn src/index.ts",
-    "eslint": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "build": "tsc",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
     "typecheck": "tsc --project tsconfig.json --noEmit --skipLibCheck",
     "typeorm": "typeorm-ts-node-commonjs"
   },
@@ -13,20 +14,20 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.46.0",
-    "@typescript-eslint/parser": "^5.46.0",
-    "eslint": "^8.29.0",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "eslint": "^8.38.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.8.1",
+    "prettier": "^2.8.7",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0",
-    "typescript": "^4.9.4"
+    "typescript": "^5.0.4"
   },
   "dependencies": {
-    "sqlite3": "^5.1.4",
-    "typeorm": "^0.3.11"
+    "sqlite3": "^5.1.6",
+    "typeorm": "^0.3.13"
   }
 }
