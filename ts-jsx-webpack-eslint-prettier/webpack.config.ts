@@ -62,7 +62,6 @@ export default {
   devtool: isDev ? 'inline-source-map' : 'hidden-source-map',
   devServer: {
     compress: true,
-    https: true,
     open: true,
     hot: true,
   } satisfies DevServerConfiguration,
