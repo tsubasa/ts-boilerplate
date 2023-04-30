@@ -20,7 +20,7 @@ export default {
   target: 'web',
   entry: './src/index.tsx',
   output: {
-    path: `${__dirname}/build`,
+    path: `${__dirname}/dist`,
     filename: 'app.min.js',
   },
   module: {

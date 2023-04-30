@@ -6,6 +6,7 @@
   },
   "extends": [
     "airbnb-base",
+    "airbnb-typescript/base",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended"
   ],
@@ -15,7 +16,8 @@
       "jsx": false
     },
     "ecmaVersion": "latest",
-    "sourceType": "module"
+    "sourceType": "module",
+    "project": "./tsconfig.json"
   },
   "plugins": [
     "@typescript-eslint",
@@ -24,16 +26,6 @@
   "rules": {
     "prettier/prettier": "warn",
     "import/extensions": "off",
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": [
-          "**/vite.config.ts"
-        ],
-        "peerDependencies": false
-      }
-    ],
-    "import/no-unresolved": "off",
     "no-console": [
       "warn",
       {
@@ -44,5 +36,10 @@
       }
     ],
     "no-use-before-define": "off" // https://github.com/typescript-eslint/typescript-eslint/issues/2540
-  }
+  },
+  "ignorePatterns": [
+    "node_modules",
+    "dist",
+    "vite.config.ts"
+  ]
 }

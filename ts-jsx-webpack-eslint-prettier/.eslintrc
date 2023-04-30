@@ -6,6 +6,7 @@
   },
   "extends": [
     "airbnb",
+    "airbnb-typescript",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:prettier/recommended"
@@ -16,7 +17,8 @@
       "jsx": true
     },
     "ecmaVersion": "latest",
-    "sourceType": "module"
+    "sourceType": "module",
+    "project": "./tsconfig.json"
   },
   "plugins": [
     "@typescript-eslint",
@@ -25,25 +27,6 @@
   ],
   "rules": {
     "prettier/prettier": "warn",
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        "js": "never",
-        "jsx": "never",
-        "ts": "never",
-        "tsx": "never"
-      }
-    ],
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": [
-          "**/webpack.config.ts"
-        ],
-        "peerDependencies": false
-      }
-    ],
     "no-console": [
       "warn",
       {
@@ -54,31 +37,11 @@
       }
     ],
     "no-use-before-define": "off", // https://github.com/typescript-eslint/typescript-eslint/issues/2540
-    "react/function-component-definition": "off",
-    "react/jsx-filename-extension": [
-      "warn",
-      {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
-      }
-    ],
-    "react/jsx-props-no-spreading": "off"
+    "react/function-component-definition": "off"
   },
-  "settings": {
-    "import/resolver": {
-      "node": {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
-      },
-      "webpack": {}
-    }
-  }
+  "ignorePatterns": [
+    "node_modules",
+    "dist",
+    "webpack.config.ts"
+  ]
 }

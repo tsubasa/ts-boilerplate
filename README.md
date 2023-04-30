@@ -69,3 +69,9 @@ export default {
 React ベースで開発を行う場合は `eslint-config-airbnb` を利用し、それ以外の場合は `eslint-config-airbnb-base` を利用します。
 
 - https://maku.blog/p/yfow6dk/
+
+### eslint-config-airbnb-typescript の設定方法
+
+React ベースで開発を行う場合は `airbnb-typescript` を利用し、それ以外の場合は `airbnb-typescript/base` を利用します。
+
+- https://github.com/iamturns/eslint-config-airbnb-typescript
