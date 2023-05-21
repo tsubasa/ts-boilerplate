@@ -4,7 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "develop": "next dev --turbo",
+    "develop": "run-p develop:*",
+    "develop:next": "next dev --turbo",
+    "develop:tcm": "typed-scss-modules src --watch --implementation sass --nameFormat none --exportType default --aliasPrefixes.@ src",
     "build": "next build",
     "preview": "next start",
     "lint": "run-p lint:*",
