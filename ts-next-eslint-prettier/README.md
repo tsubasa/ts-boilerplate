@@ -32,7 +32,8 @@ $ yarn add --dev sass typed-scss-modules
 ### Install packages
 
 ```sh
-$ yarn add --dev styled-components @types/styled-components postcss-styled-syntax
+$ yarn add styled-components
+$ yarn add --dev @types/styled-components postcss-styled-syntax
 ```
 
 ### Edit `.stylelintrc`
@@ -43,4 +44,17 @@ $ yarn add --dev styled-components @types/styled-components postcss-styled-synta
    ],
 +  "customSyntax": "postcss-styled-syntax"
  }
+```
+
+### Edit VScode `settings.json`
+
+```diff
+    "stylelint.validate": [
+        "css",
+        "less",
+        "scss",
+        "postcss",
++        "javascriptreact",
++        "typescriptreact",
+    ],
 ```
