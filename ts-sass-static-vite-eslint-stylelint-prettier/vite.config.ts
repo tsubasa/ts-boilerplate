@@ -8,6 +8,7 @@ export default defineConfig({
   build: {
     outDir: '../dist',
   },
+  envDir: '../',
   plugins: [
     checker({
       typescript: true,
